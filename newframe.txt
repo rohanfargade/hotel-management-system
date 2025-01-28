@@ -1,0 +1,80 @@
+labelframeleft=LabelFrame(self.root,bd=2,relief=RIDGE,text="Customer Details",font=("arial",15,"bold"),padx=2)
+        labelframeleft.place(x=5,y=50,width=510,height=600)
+
+        #5-----------------------------
+        #===========================labels and entries=========================
+        lbl_cust_ref=Label(labelframeleft,text="Customer Ref :",font=("arial",15,"bold"),padx=2,pady=6)
+        lbl_cust_ref.grid(row=0,column=0,sticky=W)
+        enty_ref=ttk.Entry(labelframeleft,self.var_ref.set(str(x)),font=("arial",15,"bold"),width=29)
+        enty_ref.grid(row=0,column=1)
+
+        #=========================cust name===================================
+        cname=Label(labelframeleft,text="Customer name :",font=("arial",15,"bold"),padx=2,pady=6)
+        cname.grid(row=1,column=0,sticky=W)
+        txtcname=ttk.Entry(labelframeleft,textvariable=self.var_cust_name,font=("arial",15,"bold"),width=29)
+        txtcname.grid(row=1,column=1)
+
+        #=========================mother name==================================
+        lblmname=Label(labelframeleft,text="Mother name :",font=("arial",15,"bold"),padx=2,pady=6)
+        lblmname.grid(row=2,column=0,sticky=W)
+        txtcname=ttk.Entry(labelframeleft,textvariable=self.var_mother,font=("arial",15,"bold"),width=29)
+        txtcname.grid(row=2,column=1)
+
+        #==========================gender combobox===================================
+        label_gender=Label(labelframeleft,text="Gender :",font=("arial",15,"bold"),padx=2,pady=6)
+        label_gender.grid(row=3,column=0,sticky=W)
+
+        combo_gender=ttk.Combobox(labelframeleft,textvariable=self.var_gender,font=("arial",15,"bold"),width=27,state="readonly")
+        combo_gender["value"]=("Select","Male","Female","Other")
+        combo_gender.current(0)
+        combo_gender.grid(row=3,column=1)
+
+
+
+        #=======================postcode==============================================
+        lblPostCode=Label(labelframeleft,text="Post Code :",font=("arial",15,"bold"),padx=2,pady=6)
+        lblPostCode.grid(row=4,column=0,sticky=W)
+        txtPostCode=ttk.Entry(labelframeleft,textvariable=self.var_post,font=("arial",15,"bold"),width=29)
+        txtPostCode.grid(row=4,column=1)
+
+        #===============================mobile number==============================
+        lblMobile=Label(labelframeleft,text="Mobile No. :",font=("arial",15,"bold"),padx=2,pady=6)
+        lblMobile.grid(row=5,column=0,sticky=W)
+        txtMobile=ttk.Entry(labelframeleft,textvariable=self.var_mobile,font=("arial",15,"bold"),width=29)
+        txtMobile.grid(row=5,column=1)
+
+        #=============================email======================================
+        lblEmail=Label(labelframeleft,text="Email :",font=("arial",15,"bold"),padx=2,pady=6)
+        lblEmail.grid(row=6,column=0,sticky=W)
+        txtEmail=ttk.Entry(labelframeleft,textvariable=self.var_email,font=("arial",15,"bold"),width=29)
+        txtEmail.grid(row=6,column=1)
+
+        #============================nationality============================
+        lblNationality=Label(labelframeleft,text="Nationality :",font=("arial",15,"bold"),padx=2,pady=6)
+        lblNationality.grid(row=7,column=0,sticky=W)
+
+        combo_Nationality=ttk.Combobox(labelframeleft,textvariable=self.var_nationality,font=("arial",15,"bold"),width=27,state="readonly")
+        combo_Nationality["value"]=("Select","Indian","American","Russian")
+        combo_Nationality.current(0)
+        combo_Nationality.grid(row=7,column=1)
+
+        #==========================idproof===============================
+        lblIdProof=Label(labelframeleft,text="ID Proof :",font=("arial",15,"bold"),padx=2,pady=6)
+        lblIdProof.grid(row=8,column=0,sticky=W)
+
+        combo_id=ttk.Combobox(labelframeleft,textvariable=self.var_id_proof,font=("arial",15,"bold"),width=27,state="readonly")
+        combo_id["value"]=("Select","Adhaar card","Licence","Passport")
+        combo_id.current(0)
+        combo_id.grid(row=8,column=1)
+
+        #=============================idnumber=============================
+        lblIdNumber=Label(labelframeleft,text="Id Number:",font=("arial",15,"bold"),padx=2,pady=6)
+        lblIdNumber.grid(row=9,column=0,sticky=W)
+        txtIdNumber=ttk.Entry(labelframeleft,textvariable=self.var_id_number,font=("arial",15,"bold"),width=29)
+        txtIdNumber.grid(row=9,column=1)
+
+        #==================address=======================================
+        lblAddress=Label(labelframeleft,text="Address:",font=("arial",15,"bold"),padx=2,pady=6)
+        lblAddress.grid(row=10,column=0,sticky=W)
+        txtAddress=ttk.Entry(labelframeleft,textvariable=self.var_address,font=("arial",15,"bold"),width=29)
+        txtAddress.grid(row=10,column=1)
